@@ -1,0 +1,12 @@
+
+.data-table {
+  width: 80%;
+  margin: 20px auto;
+  background: rgb(0, 70, 129);
+  color: aliceblue;
+}
+
+
+.full-width-table {
+  width: 100%;
+}

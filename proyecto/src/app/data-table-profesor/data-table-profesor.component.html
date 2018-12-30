@@ -1,0 +1,51 @@
+<div class="mat-elevation-z8 data-table">
+    <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+      <!-- Nombre Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+        <td mat-cell *matCellDef="let row">{{row.nombre}}</td>
+      </ng-container>
+      <!-- año Column -->
+      <ng-container matColumnDef="anio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Año</th>
+        <td mat-cell *matCellDef="let row">{{row.anio}}</td>
+      </ng-container>
+      <!-- semestre Column -->
+      <ng-container matColumnDef="semestre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Semestre</th>
+        <td mat-cell *matCellDef="let row">{{row.semestre}}</td>
+      </ng-container>
+      <!-- aprobados Column -->
+      <ng-container matColumnDef="aprobados">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Aprobados</th>
+          <td mat-cell *matCellDef="let row">{{row.aprobados}}</td>
+        </ng-container>
+        <!-- reprobados Column -->
+      <ng-container matColumnDef="reprobados">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Reprobados</th>
+          <td mat-cell *matCellDef="let row">{{row.reprobados}}</td>
+        </ng-container>
+      <!-- Nota Column -->
+      <ng-container matColumnDef="nota">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nota</th>
+        <td mat-cell *matCellDef="let row">{{row.nota}}</td>
+      </ng-container>
+      <!-- desviacion Column -->
+      <ng-container matColumnDef="desviacion">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>desviacion</th>
+          <td mat-cell *matCellDef="let row">{{row.desviacion}}</td>
+        </ng-container>
+      
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageIndex]="0"
+        [pageSize]="50"
+        [pageSizeOptions]="[25, 50, 100, 250]">
+    </mat-paginator>
+  </div>
+  

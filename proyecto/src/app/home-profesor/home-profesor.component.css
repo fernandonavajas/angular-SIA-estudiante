@@ -1,0 +1,35 @@
+.h1 {
+    margin: 15px;
+    padding: 0 0 20px;
+    text-align: right;
+    font-size: 22px;
+  }
+.padding{
+    padding: 10px 0px;
+}
+  .login-box {
+    width: 370px;
+    height: 420px;
+    background: rgb(0, 70, 129);
+    color: #fff;
+    position: static;
+    transform: translate(5%, 5%);
+    box-sizing: border-box;
+    border-radius: 10%;
+    padding: 35px 50px;
+    text-align: left;
+  }
+
+  .bigPadding{
+    padding: 100px 100px;
+  }
+  .header{
+    width: 100%;
+    height:300px;
+    background: rgb(0, 70, 129);
+    transform: translate(5%, 5%);
+    color: #fff;
+    padding: 5px 10px;
+    text-align: left;
+    border-radius: 10px
+  }

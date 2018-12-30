@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "a508309f-7833-4201-8e36-a558f6f986c2",
+		"name": "Academia",
+		"description": "Servicio REST simplificados para Academia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Genera un intento de autenticación.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"utem2018\",\n  \"rut\": \"15.997.886-9\"\n}"
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/authentication/authenticate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"authentication",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Envía una contraseña a un usuario válido.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/authentication/forgot/11.739.972-9",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"authentication",
+								"forgot",
+								"11.739.972-9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambia la contraseña del usuario.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"c2b35ae\",\n  \"repeat\": \"c2b35ae\",\n  \"rut\": \"12.111.111-K\",\n  \"temporal\": \"e4C1fg7\"\n}"
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/authentication/passsword/change",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"authentication",
+								"passsword",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene las asignaturas cursadas por estudiante.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "444cce90-1a83-40e6-93f2-3ef2a9404f05"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/courses/students/19.751.970-3",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"courses",
+								"students",
+								"19.751.970-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene las estadísticas de la asignatura por semestre y año.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "7b3eb6d1-2d86-4161-86a2-4be460efa182"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ordinal\": 1,\n  \"subjectCode\": \"INF63500\",\n  \"year\": 2014\n}"
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/courses/subject/stats",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"courses",
+								"subject",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene las estadísticas de las asignaturas impartidas por el profesor.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "7b3eb6d1-2d86-4161-86a2-4be460efa182"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/courses/teachers/8.693.477-9/stats",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"courses",
+								"teachers",
+								"8.693.477-9",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Envía un correo electrónico según los parámetros ingresados.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "7b3eb6d1-2d86-4161-86a2-4be460efa182"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ssalazar@utem.cl\",\n  \"html\": false,\n  \"message\": \"Este es un saludo desde el servicio de notificaciones.\",\n  \"name\": \"Sebastián Salazar\",\n  \"subject\": \"Saludos\",\n  \"token\": \"7b3eb6d1-2d86-4161-86a2-4be460efa182\"\n}"
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/email/send",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"email",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HeartBeat para determinar si el servicio está arriba o no lo está.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/heartbeat",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta la posición del Ranking de un estudiante.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "f6da9996-2894-4574-af7c-6de57becaa8a"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/rankings/17.737.334-6",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"rankings",
+								"17.737.334-6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Envía un sms según los parámetros ingresados.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "f6da9996-2894-4574-af7c-6de57becaa8a"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"message\": \"Este es un saludo desde el servicio de notificaciones.\",\n  \"phone\": \"+56 9 87654321\",\n  \"token\": \"737a99a2-f2c6-4a7b-a894-00cbd11f7131\"\n}"
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/sms/send",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"sms",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene la información del estudiante.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "444cce90-1a83-40e6-93f2-3ef2a9404f05"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/students/19.751.970-3",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"students",
+								"19.751.970-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene la información de un docente.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json;charset=UTF-8"
+							},
+							{
+								"key": "Content-Type",
+								"value": "*/*"
+							},
+							{
+								"key": "X-API-KEY",
+								"value": "c45d2f8d-4e6b-4d01-8607-25b316d06c12"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.sebastian.cl/academia/api/v1/teachers/10.471.648-2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sebastian",
+								"cl"
+							],
+							"path": [
+								"academia",
+								"api",
+								"v1",
+								"teachers",
+								"10.471.648-2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for api"
+		}
+	]
+}

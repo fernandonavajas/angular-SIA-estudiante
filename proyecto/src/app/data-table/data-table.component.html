@@ -1,0 +1,41 @@
+<div class="mat-elevation-z8 data-table">
+  <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+      <td mat-cell *matCellDef="let row">{{row.nombre}}</td>
+    </ng-container>
+    <!-- año Column -->
+    <ng-container matColumnDef="anio">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Año</th>
+      <td mat-cell *matCellDef="let row">{{row.anio}}</td>
+    </ng-container>
+    <!-- semestre Column -->
+    <ng-container matColumnDef="semestre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Semestre</th>
+      <td mat-cell *matCellDef="let row">{{row.semestre}}</td>
+    </ng-container>
+    <!-- Nota Column -->
+    <ng-container matColumnDef="nota">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nota</th>
+      <td mat-cell *matCellDef="let row">{{row.Nota}}</td>
+    </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="50"
+      [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator>
+</div>
